@@ -4,7 +4,7 @@ import './index.css';
 import  './App.css';
 import * as serviceWorker from './serviceWorker';
 
-
+// create function outside the class
 function getNum(){
     return Math.floor((Math.random()*10)+1)
 }
@@ -19,8 +19,9 @@ export default class NumPicker extends React.Component{
         <div className = "number"> 
             <h1>Your number is: {num}</h1>
             {/* we are telling that if is 7 is will said Congrats, otherwise Unlucky */}
-            <p>{num ===7 ? "Congrats!" : "Unlucky!"}</p>
+            <p className ="">{num ===7 ? "Congrats!" : "Unlucky!"}</p>
             {/* if number is 7 will display an image, if not nothing will appear (: null) */}
+        {/* eslint-disable-next-line */}
             {num === 7 ? <img src="https://media1.giphy.com/media/hVYVYZZBgF50k/giphy.webp?cid=790b7611bec3210349ebaf548b1b6308c861bed68605d163&rid=giphy.webp" /> :null}
       </div>
       )
